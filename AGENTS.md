@@ -5,22 +5,30 @@
 ## Project Overview
 
 **Type**: Program Definition / Documentation
-**Status**: Active (v0 + Phase 1)
+**Status**: Active (v0 through Phase 3 scaffolded)
 
 ## Key Commands
 
 ```bash
-# Build (N/A - documentation project)
-# No build step required
-
 # Validate structure
-ls -la phase-1/
+ls -la phase-1/ phase-1.1-job-packets/ phase-1.2-reuse-decision/ phase-2-stabilization/ phase-3-rollup-readiness/
 
 # Git operations
 git status
 git add -A && git commit -m "message"
 git push
 ```
+
+## Pipeline Phases
+
+| Phase | Name | Status | Description |
+|-------|------|--------|-------------|
+| 0 | Program Definition | Complete | Canonical charter, roles, boundaries |
+| 1 | Core Execution | Active | Job archetypes, workflows, forms, runbook |
+| 1.1 | Job Packets | Planned | Per-job packet templates (intake → closeout) |
+| 1.2 | Reuse Decision | Planned | PropertyManager posture decision |
+| 2 | Stabilization | Planned | Friction removal + safety hardening |
+| 3 | Roll-up Readiness | Planned | Cross-company normalization |
 
 ## Current Focus
 
@@ -41,13 +49,21 @@ proactiva-program/
 │   ├── 05_RISK_BOUNDARIES.md
 │   ├── 06_VERIA_FUTURE_PATH.md
 │   └── 07_V0_SUCCESS_CRITERIA.md
-├── phase-1/                          # Phase 1 - Execution surface
+├── phase-1/                          # Phase 1 - Core execution
 │   ├── job-archetypes/               # Job templates (HVAC, deck/remodel)
 │   ├── workflows/                    # Canonical flow definitions
 │   ├── forms/                        # Intake form schemas
 │   ├── proposals/                    # Proposal templates + disclaimers
 │   ├── runbook/                      # How to run a job
 │   └── decision-log/                 # Captured decisions
+├── phase-1.1-job-packets/            # Phase 1.1 - Job packet templates
+│   └── templates/                    # JOB_PACKET, EXECUTION_CHECKLIST, CLOSEOUT
+├── phase-1.2-reuse-decision/         # Phase 1.2 - System reuse decision
+│   └── PROPERTYMANAGER_DECISION_MEMO.md
+├── phase-2-stabilization/            # Phase 2 - Stabilization
+│   └── checklists/                   # STABILIZATION_CHECKLIST
+├── phase-3-rollup-readiness/         # Phase 3 - Roll-up readiness
+│   └── templates/                    # SOP, CROSS_COMPANY_NORMALIZATION
 └── docs/plans/                       # Work plans
 ```
 
@@ -57,6 +73,8 @@ proactiva-program/
 - `phase-1/workflows/canonical-flow.md` - The canonical job workflow
 - `phase-1/runbook/run-one-job.md` - Step-by-step execution guide
 - `phase-1/decision-log/DECISIONS.md` - Decision record
+- `phase-1.1-job-packets/templates/JOB_PACKET.md` - Job packet template
+- `phase-2-stabilization/checklists/STABILIZATION_CHECKLIST.md` - Stabilization checklist
 
 ## Critical Constraints
 
