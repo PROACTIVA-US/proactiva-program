@@ -1,13 +1,11 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "HVAC Intake v0",
   "type": "object",
   "required": [
     "customer_name",
     "site_address",
     "job_type",
-    "requested_outcome",
-    "conditioned_sqft_estimate"
+    "requested_outcome"
   ],
   "properties": {
     "customer_name": {
@@ -17,48 +15,16 @@
       "type": "string"
     },
     "job_type": {
-      "type": "string",
-      "enum": [
-        "service",
-        "repair",
-        "replace",
-        "new_install"
-      ]
+      "type": "string"
     },
     "requested_outcome": {
       "type": "string"
-    },
-    "existing_equipment": {
-      "type": "object",
-      "properties": {
-        "make": {
-          "type": "string"
-        },
-        "model": {
-          "type": "string"
-        },
-        "approx_tonnage": {
-          "type": "string"
-        },
-        "age_years": {
-          "type": "number"
-        }
-      }
-    },
-    "conditioned_sqft_estimate": {
-      "type": "number"
-    },
-    "ceiling_height_ft": {
-      "type": "number"
     },
     "photos_urls": {
       "type": "array",
       "items": {
         "type": "string"
       }
-    },
-    "constraints": {
-      "type": "string"
     },
     "notes": {
       "type": "string"
