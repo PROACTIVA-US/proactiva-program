@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Deck/Remodel Intake v0",
+  "type": "object",
+  "required": [
+    "customer_name",
+    "site_address",
+    "project_type",
+    "requested_outcome"
+  ],
+  "properties": {
+    "customer_name": {
+      "type": "string"
+    },
+    "site_address": {
+      "type": "string"
+    },
+    "project_type": {
+      "type": "string"
+    },
+    "requested_outcome": {
+      "type": "string"
+    },
+    "rough_dimensions": {
+      "type": "string"
+    },
+    "photos_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "materials_preferences": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
