@@ -64,6 +64,20 @@ proactiva-program/
 │   └── checklists/                   # STABILIZATION_CHECKLIST
 ├── phase-3-rollup-readiness/         # Phase 3 - Roll-up readiness
 │   └── templates/                    # SOP, CROSS_COMPANY_NORMALIZATION
+├── agents/                           # Governance - Agent definitions
+│   ├── PROGRAM_DIRECTOR.md           # Program Director role
+│   ├── PROACTIVA_CEO.md              # Proactiva Project CEO
+│   └── VERIA_CEO.md                  # Veria Project CEO
+├── reporting/                        # Governance - Report templates
+│   ├── STATUS_REPORT.md
+│   ├── RECOMMENDATION_REPORT.md
+│   └── DECISION_REPORT.md
+├── enforcement/                      # Governance - Enforcement rules
+│   ├── ESCALATION_RULES.md
+│   └── DIRECTIVE_PROTOCOL.md
+├── pipelines/                        # Governance - Reporting pipelines
+│   ├── CEO_REPORTING_PIPELINE.md
+│   └── PROGRAM_DIRECTOR_REVIEW_PIPELINE.md
 └── docs/plans/                       # Work plans
 ```
 
@@ -75,6 +89,27 @@ proactiva-program/
 - `phase-1/decision-log/DECISIONS.md` - Decision record
 - `phase-1.1-job-packets/templates/JOB_PACKET.md` - Job packet template
 - `phase-2-stabilization/checklists/STABILIZATION_CHECKLIST.md` - Stabilization checklist
+- `agents/PROGRAM_DIRECTOR.md` - Program Director authority and scope
+- `enforcement/ESCALATION_RULES.md` - When and how to escalate
+- `pipelines/CEO_REPORTING_PIPELINE.md` - How Project CEOs report up
+
+## Governance
+
+### Agent Hierarchy
+
+```
+Program Director (Human)
+    ├── Proactiva CEO (Agent) - Construction + HVAC operations
+    └── Veria CEO (Agent) - Compliance layers (deferred)
+```
+
+### Reporting Flow
+
+1. **Project CEOs** generate STATUS_REPORT, RECOMMENDATION_REPORT, or DECISION_REPORT
+2. **CEO_REPORTING_PIPELINE** routes reports to Program Director
+3. **PROGRAM_DIRECTOR_REVIEW_PIPELINE** processes and responds
+4. **ESCALATION_RULES** define when human intervention is required
+5. **DIRECTIVE_PROTOCOL** governs how directives flow downward
 
 ## Critical Constraints
 
