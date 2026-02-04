@@ -1,0 +1,55 @@
+pipeline: decision-audit
+version: v0
+nodes:
+- id: ceo_intent
+  role: project_ceo
+  type: gate
+  outputs:
+  - outputs/DECISION_INTENT_CONFIRMED.md
+- id: executor_audit
+  role: executor
+  type: task
+  inputs:
+  - inputs/DECISION_INTENT.md
+  outputs:
+  - outputs/AUDIT_FINDINGS.md
+- id: executor_memo
+  role: executor
+  type: task
+  inputs:
+  - outputs/AUDIT_FINDINGS.md
+  outputs:
+  - outputs/DECISION_MEMO.md
+- id: reviewer_review
+  role: reviewer
+  type: task
+  inputs:
+  - outputs/AUDIT_FINDINGS.md
+  - outputs/DECISION_MEMO.md
+  outputs:
+  - outputs/REVIEW_FINDINGS.md
+- id: ceo_submit
+  role: project_ceo
+  type: gate
+  inputs:
+  - outputs/REVIEW_FINDINGS.md
+  outputs:
+  - outputs/DECISION_REPORT.md
+- id: pd_directive
+  role: program_director
+  type: gate
+  inputs:
+  - outputs/DECISION_REPORT.md
+  outputs:
+  - outputs/PROGRAM_DIRECTOR_DIRECTIVE.md
+edges:
+- - ceo_intent
+  - executor_audit
+- - executor_audit
+  - executor_memo
+- - executor_memo
+  - reviewer_review
+- - reviewer_review
+  - ceo_submit
+- - ceo_submit
+  - pd_directive
