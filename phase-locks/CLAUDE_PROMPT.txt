@@ -1,0 +1,23 @@
+CLAUDE EXECUTION PROMPT — PHASE 0–1 FORMAL LOCK
+
+You are operating inside the `proactiva-program` repo.
+
+Objective:
+- Formally lock Phase 0–1 by verifying required artifacts and adding lock records.
+- Do not change any canonical docs or phase folders other than adding `phase-locks/` and filling the lock report.
+
+Steps:
+1) Ensure repo is clean: `git status`.
+2) Apply this bundle by copying `phase-locks/` into repo root.
+3) Run:
+   - `bash phase-locks/verify_phase_0_1_lock.sh`
+   - If any missing items are reported, STOP and record details in `phase-locks/LOCK_REPORT.md`.
+4) Complete `phase-locks/LOCK_REPORT.md` with YES/NO answers and evidence.
+5) Ensure `phase-locks/PHASE_0_1_LOCK.md` is present and unchanged (it is the declaration).
+6) Commit:
+   - `git add phase-locks`
+   - `git commit -m "Lock Phase 0–1 (formal verification + governance gating)"`
+7) Respond with the commit hash and a short summary of any warnings.
+
+Important:
+- If checks fail, do not “fix” by modifying prior phase content. Record and stop.
