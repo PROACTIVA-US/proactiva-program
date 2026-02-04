@@ -40,7 +40,18 @@ git push
 
 ```
 proactiva-program/
-├── Proactiva-Program-Pack-v0-MEGA/   # Phase 0 - Canonical program definition
+├── NAVIGATION.md                     # Entry point - start here
+├── phases/                           # Navigation - Phase index
+│   ├── 00_PHASES_MAP.md              # Links to all phase folders
+│   └── PHASE_LOCKS.md                # Lock status overview
+├── program/                          # Navigation - Program index
+│   ├── CANON_INDEX.md                # Links to canonical docs
+│   └── GOVERNANCE_MAP.md             # Links to governance docs
+├── phase-locks/                      # Formal lock records
+│   ├── PHASE_0_1_LOCK.md             # Lock declaration
+│   ├── LOCK_REPORT.md                # Verification results
+│   └── verify_phase_0_1_lock.sh      # Verification script
+├── Proactiva-Program-Pack-v0-MEGA/   # Phase 0 - Canonical (LOCKED)
 │   ├── 00_EXECUTIVE_SUMMARY.md
 │   ├── 01_PROGRAM_CHARTER.md
 │   ├── 02_INSTANTIATION_PLAN.md
@@ -49,7 +60,7 @@ proactiva-program/
 │   ├── 05_RISK_BOUNDARIES.md
 │   ├── 06_VERIA_FUTURE_PATH.md
 │   └── 07_V0_SUCCESS_CRITERIA.md
-├── phase-1/                          # Phase 1 - Core execution
+├── phase-1/                          # Phase 1 - Core execution (LOCKED)
 │   ├── job-archetypes/               # Job templates (HVAC, deck/remodel)
 │   ├── workflows/                    # Canonical flow definitions
 │   ├── forms/                        # Intake form schemas
@@ -83,12 +94,23 @@ proactiva-program/
 
 ## Important Files
 
-- `Proactiva-Program-Pack-v0-MEGA/README.md` - Program overview
+**Navigation (start here):**
+- `NAVIGATION.md` - Single entry point for humans
+- `phases/00_PHASES_MAP.md` - Phase index with links
+- `program/CANON_INDEX.md` - Canonical docs index
+- `program/GOVERNANCE_MAP.md` - Governance docs index
+
+**Phase Locks:**
+- `phase-locks/PHASE_0_1_LOCK.md` - Formal lock declaration
+- `phase-locks/LOCK_REPORT.md` - Verification report
+
+**Execution:**
 - `phase-1/workflows/canonical-flow.md` - The canonical job workflow
 - `phase-1/runbook/run-one-job.md` - Step-by-step execution guide
 - `phase-1/decision-log/DECISIONS.md` - Decision record
 - `phase-1.1-job-packets/templates/JOB_PACKET.md` - Job packet template
-- `phase-2-stabilization/checklists/STABILIZATION_CHECKLIST.md` - Stabilization checklist
+
+**Governance:**
 - `agents/PROGRAM_DIRECTOR.md` - Program Director authority and scope
 - `enforcement/ESCALATION_RULES.md` - When and how to escalate
 - `pipelines/CEO_REPORTING_PIPELINE.md` - How Project CEOs report up
